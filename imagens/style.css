@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgb(165, 114, 79) 0%, rgb(204, 65, 60) 100% );
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+    height: 100vh;
+}
+
+.input-container{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+}
+
+.input-container  img {
+    width: 400px;
+}
+
+.input-results > form > label >   input {
+    text-align: center;
+    display: flex;
+    background-color: rgb(219, 219, 219);
+    padding: 15px 75px;
+    margin: 15px;
+    outline: 0;
+    border: none;
+    border-radius: 5px;
+}
+
+.p-info{
+    font-weight: 500;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    margin-left: 20px;
+    font-size: 17px;
+    color: rgb(0, 0, 0);
+}
+
+.input-results  > form > label >  input::placeholder{
+    color: black;
+}
+
+.input-results > button {
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 15px;
+    background-color: rgb(197, 197, 197);;
+    width: 100px;
+    padding: 10px 20px;
+    outline: 0;
+    border: none;
+    border-radius: 4px;
+}
+
+.input-results > button:hover {
+    width: 110px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.input-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-one{
+    position: absolute;
+    bottom: 100px;
+    left: 70px;
+}
+
+.img-one > img {
+    width: 350px;
+}
+
+
+.img-two{
+    position: absolute;
+    bottom: 200px;
+    left: 500px;
+}
+
+.img-two > img {
+    width: 350px;
+}
+
+#resultado {
+    font-size: 25px;
+    color: black;
+    margin-top: 40px;
+}
+
+
+.carne > img{
+ width: 30px; 
+ margin-right: 10px;
+}
+
+.cerveja > img{
+ width: 30px; 
+ margin-right: 10px;
+}
+
+.refri > img{
+ width: 30px; 
+ margin-right: 10px;
+ margin-left: -3px;
+}
+
+.msg-principal{
+    position: absolute;
+    width: 800px;
+    color: white;
+    top: 30px;
+    left: 40px;
+    font-size: 13px;
+}
+
+.input-container{
+    visibility: hidden;
+    transform: translateX(-100%);
+    animation: initialization 1s ease-in-out forwards;
+}
+
+.msg-principal{
+    visibility: hidden;
+    transform: translateX(-100%);
+    animation: initialization 1.2s ease-in-out forwards;
+}
+
+.img-one{
+    visibility: hidden;
+    transform: translateX(-100%);
+    animation: initialization 1.4s ease-in-out forwards;
+}
+
+.img-two{
+    visibility: hidden;
+    transform: translateY(100%);
+    animation: imgoff 1.3s ease-in-out forwards;
+}
+
+
+@media (max-width: 1200px){
+   .img-two{
+       display: none;
+   }
+   .msg-principal{
+       width: 500px;
+   }
+}
+
+@media (max-width: 900px){
+    .msg-principal{
+        display: none;
+    }
+    .img-one{
+        display: none;
+    }
+    .container{
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@keyframes initialization {
+    to{
+        transform: translateX(0);
+        visibility: visible;
+    }
+}
+
+@keyframes imgoff {
+    to{
+        transform: translateY(0);
+        visibility: visible;
+    }
+}
