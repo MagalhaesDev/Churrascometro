@@ -176,13 +176,13 @@
     }
     .container{
         align-items: center;
-        justify-content: center;
+        justify-content: stretch;
     }
-    .input-container  img{
-        width: 300px;
+    .input-container > img{
+        width: 340px;
     }
     .input-container {
-        width: 300px;
+        width: 340px;
     }
 }
 
